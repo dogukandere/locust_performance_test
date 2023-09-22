@@ -4,6 +4,7 @@ from locust import HttpUser, task, between
 class AmazonTest(HttpUser):
 
     wait_time = between(1, 5)
+    host = "https://www.amazon.com.tr"
 
     def on_start(self):
         print("Test starting")

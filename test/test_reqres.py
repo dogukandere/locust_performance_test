@@ -4,6 +4,7 @@ from locust import task, constant, HttpUser, TaskSet, between, constant_pacing
 class FirstTest(HttpUser):
 
     wait_time = between(1, 5)
+    host = "https://reqres.in"
 
     def on_start(self):
         print("start settings")
