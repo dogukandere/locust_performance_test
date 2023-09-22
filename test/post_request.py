@@ -11,11 +11,8 @@ class PostRequest(HttpUser):
             "email": "eve.holt@reqres.in",
             "password": "cityslicka"
         }
-        headers = {
-            "token": "QpwL5tke4Pnpja7X4"
-        }
 
-        with self.client.post("/api/login", data=pyload, headers=headers) as response:
+        with self.client.post("/api/login", data=pyload) as response:
             if response.status_code == 200:
                 print(response)
             else:
